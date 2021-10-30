@@ -18,7 +18,7 @@ class MakeGrayFrame:
         backgroundRGB = (255, 255, 255)
         textRGB       = (0, 0, 0)
 
-        font = ImageFont.truetype("HGRGE.TTC", 10)
+        font = ImageFont.truetype("./HGRGE.TTC", 10)
         pos = (0,0)
 
 
