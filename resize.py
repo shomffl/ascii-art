@@ -1,5 +1,7 @@
 import cv2
 
+
+#画像のサイズ変更処理
 class ResizeImage:
 
     def __init__(self, filepath, output_path):
@@ -10,9 +12,11 @@ class ResizeImage:
         image = cv2.imread(self.filepath)
         height = image.shape[0]
         width = image.shape[1]
-        longer_one = max(height,width)
 
+        #画像の縦と横で長い方に合わせて画像の縮小％を決定する
+        longer_one = max(height,width)
         adjust_per = round(200 / longer_one, 2)
+
         adjust_height = int(height * adjust_per)
         adjust_width = int(width * adjust_per)
 
